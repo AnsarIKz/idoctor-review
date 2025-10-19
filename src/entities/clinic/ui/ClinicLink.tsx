@@ -1,5 +1,5 @@
 import React from "react";
-import { IClinic } from "../model/clinic.types";
+import type { IClinic } from "../model/clinic.types";
 
 const LocationIcon = () => (
   <svg

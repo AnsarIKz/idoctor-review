@@ -19,7 +19,7 @@ export interface IDoctor {
   id: string;
   photoUrl: string;
   fullName: string;
-  specialization: string;
+  specialization: string[];
   experienceYears: number;
   rating: IRating;
 

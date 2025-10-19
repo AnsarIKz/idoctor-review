@@ -65,7 +65,9 @@ export const DoctorCard = ({
           <figure className="w-24 lg:size-44 [...]">
             <div className="relative flex aspect-square w-44 [...]">
               <Image
-                alt={`На фотографии изображён ${doctor.specialization} ${doctor.fullName}`}
+                alt={`На фотографии изображён ${doctor.specialization.join(
+                  ", "
+                )} ${doctor.fullName}`}
                 src={doctor.photoUrl}
                 className="absolute inset-0 size-full rounded-full md:rounded-3xl object-cover"
                 fill
@@ -89,7 +91,7 @@ export const DoctorCard = ({
 
       <div className="flex flex-col">
         <div className="flex flex-col">
-          <p className="text-sm">{doctor.specialization}</p>
+          <p className="text-sm">{doctor.specialization.join(", ")}</p>
           {renderDoctorLink(
             <span className="font-bold">
               <h4 className="inline text-lg">

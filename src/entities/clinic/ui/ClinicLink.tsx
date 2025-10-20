@@ -1,5 +1,4 @@
-import React from "react";
-import type { IClinic } from "../model/clinic.types";
+import type { IRelatedClinic } from "@/shared/lib/date/related.types";
 
 const LocationIcon = () => (
   <svg
@@ -13,11 +12,10 @@ const LocationIcon = () => (
 );
 
 interface ClinicLinkProps {
-  clinic: IClinic;
-  renderLink: (name: string) => React.JSX.Element;
+  clinic: IRelatedClinic;
 }
 
-export const ClinicLink = ({ clinic, renderLink }: ClinicLinkProps) => {
+export const ClinicLink = ({ clinic }: ClinicLinkProps) => {
   const linkText = `${clinic.name} - ${clinic.address}`;
 
   return (
@@ -31,8 +29,9 @@ export const ClinicLink = ({ clinic, renderLink }: ClinicLinkProps) => {
         </address>
       </div>
 
+      {/* TODO: Add link */}
       <div className="block text-xs text-additionalBlue hover:underline active:text-additionalBlue/80 md:text-sm">
-        {renderLink(linkText)}
+        {linkText}
       </div>
     </div>
   );

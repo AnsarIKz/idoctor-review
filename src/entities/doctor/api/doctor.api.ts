@@ -2,8 +2,10 @@ import type { IDoctor } from "@/entities/doctor/model/doctor.types";
 
 export const getDoctors = async (): Promise<IDoctor[]> => {
   try {
-    const res = await fetch(`${process.env.API_URL}/api/doctors`, {
-      next: { revalidate: 3600 },
+    const res = await fetch("/api/doctors", {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+      cache: "no-store",
     });
 
     if (!res.ok) {

@@ -39,7 +39,7 @@ export const doctors: IDoctor[] = [
     ],
     discountLabel: "10% off online",
     priceDisclaimer: "Prices may vary depending on the case.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "21 окт.",
@@ -90,7 +90,7 @@ export const doctors: IDoctor[] = [
     prices: [{ type: "primary", minPrice: 120 }],
     discountLabel: null,
     priceDisclaimer: "Prices may vary depending on the case.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "22 окт.",
@@ -157,7 +157,7 @@ export const doctors: IDoctor[] = [
     ],
     discountLabel: "25% off online consultations",
     priceDisclaimer: "Consultation only. Treatment costs extra.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "21 окт.",
@@ -229,7 +229,7 @@ export const doctors: IDoctor[] = [
     ],
     discountLabel: "",
     priceDisclaimer: "Surgery costs not included.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "22 окт.",
@@ -287,7 +287,7 @@ export const doctors: IDoctor[] = [
     prices: [{ type: "primary", minPrice: 250 }],
     discountLabel: "",
     priceDisclaimer: "Prices may vary depending on the case.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "21 окт.",
@@ -350,7 +350,7 @@ export const doctors: IDoctor[] = [
     ],
     discountLabel: "First visit 30% off",
     priceDisclaimer: "Prices may vary depending on the case.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "22 окт.",
@@ -411,7 +411,7 @@ export const doctors: IDoctor[] = [
     prices: [{ type: "primary", minPrice: 100 }],
     discountLabel: "",
     priceDisclaimer: "Prices may vary depending on the case.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "21 окт.",
@@ -472,7 +472,7 @@ export const doctors: IDoctor[] = [
     prices: [{ type: "primary", minPrice: 220 }],
     discountLabel: "",
     priceDisclaimer: "Prices may vary depending on the case.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "22 окт.",
@@ -525,7 +525,7 @@ export const doctors: IDoctor[] = [
     ],
     discountLabel: "",
     priceDisclaimer: "Session length: 50 minutes.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "21 окт.",
@@ -576,7 +576,7 @@ export const doctors: IDoctor[] = [
     ],
     discountLabel: "",
     priceDisclaimer: "Prices may vary depending on the case.",
-    availableDays: {
+    availableSlots: {
       days: [
         {
           date: "22 окт.",

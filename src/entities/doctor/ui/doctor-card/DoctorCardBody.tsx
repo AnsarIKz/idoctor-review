@@ -1,7 +1,6 @@
 import React from "react";
 import type { IDoctor } from "../../model/doctor.types";
 import type { IRelatedClinic } from "@/shared/lib/date/related.types";
-import type { ISlot, WorkingHours } from "@/shared/lib/date/date.types";
 import { PriceDisplay } from "../PriceDisplay";
 
 interface DoctorCardBodyProps {
@@ -14,15 +13,10 @@ interface DoctorCardBodyProps {
     | "prices"
     | "priceDisclaimer"
     | "clinics"
-    | "availableSlots"
-    | "dailySchedule"
   >;
   renderDoctorLink: (children: React.ReactNode) => React.ReactNode;
   renderClinicLinkSlot: (clinic: IRelatedClinic) => React.ReactNode;
-  renderTimeSlots: (
-    slots: ISlot[],
-    dailySchedule: WorkingHours[]
-  ) => React.ReactNode;
+  renderTimeSlots: () => React.ReactNode;
 }
 
 export const DoctorCardBody = ({
@@ -80,9 +74,7 @@ export const DoctorCardBody = ({
         {doctor.clinics[0] && renderClinicLinkSlot(doctor.clinics[0])}
       </div>
 
-      <div className="mt-4">
-        {renderTimeSlots(doctor.availableSlots, doctor.dailySchedule)}
-      </div>
+      <div className="mt-4">{renderTimeSlots()}</div>
     </div>
   );
 };

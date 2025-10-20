@@ -1,5 +1,6 @@
 import type { IClinic } from "@/entities/clinic/model/clinic.types";
-import type { ISlot, WorkingHours } from "@/shared/lib/date/date.types";
+import type { WorkingHours } from "@/shared/lib/date/date.types";
+import type { ITimeSlotsData } from "@/entities/timeslot/model/timeslot.types";
 
 export type PriceType = "primary" | "secondary" | "online";
 
@@ -30,5 +31,5 @@ export interface IDoctor {
   discountLabel: string | null;
   priceDisclaimer: string;
 
-  availableSlots: ISlot[];
+  availableSlots: ITimeSlotsData;
 }

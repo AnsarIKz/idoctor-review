@@ -1,34 +1,29 @@
-import Link from "next/link";
-
-import { getDoctors } from "@/entities/doctor/api/doctor.api";
-import { DoctorCard } from "@/entities/doctor/ui/DoctorCard";
-import type { IRelatedClinic } from "@/shared/lib/date/related.types";
+import type { IDoctor } from "@/entities/doctor/model/doctor.types";
+import { DoctorsListWithBooking } from "./DoctorsListWithBooking";
+import { headers } from "next/headers";
 
 export const DoctorsList = async () => {
-  const doctors = await getDoctors();
+  let doctors: IDoctor[] = [];
+  try {
+    const h = await headers();
+    const host = h.get("host");
+    const proto = h.get("x-forwarded-proto") ?? "http";
+    const origin = host
+      ? `${proto}://${host}`
+      : process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+    const url = `${origin}/api/doctors`;
 
-  return (
-    <section className="flex flex-col gap-4">
-      {doctors.map((doctor) => (
-        <DoctorCard
-          key={doctor.id}
-          doctor={doctor}
-          renderDoctorLink={(children) => (
-            <Link href={`/doctor/${doctor.id}`}>{children}</Link>
-          )}
-          renderClinicLinkSlot={(clinic: IRelatedClinic) => (
-            <Link
-              href={`/clinic/${clinic.id}`}
-              className="text-sm text-blue-500 hover:underline"
-            >
-              {clinic.name}: {clinic.address}
-            </Link>
-          )}
-          renderTimeSlots={(slots) => (
-            <div>Available slots: {slots.length}</div>
-          )}
-        />
-      ))}
-    </section>
-  );
+    const res = await fetch(url, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+      cache: "no-store",
+      next: { revalidate: 0 },
+    });
+    if (!res.ok) throw new Error(`Failed to fetch doctors: ${res.status}`);
+    doctors = (await res.json()) as IDoctor[];
+  } catch (e) {
+    console.error(e);
+  }
+
+  return <DoctorsListWithBooking doctors={doctors} />;
 };

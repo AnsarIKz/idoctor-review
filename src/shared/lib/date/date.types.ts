@@ -7,15 +7,6 @@ export type WeekDay =
   | "Saturday"
   | "Sunday";
 
-export interface ISlot {
-  id?: string;
-
-  /**
-   * Время начала слота в формате ISO 8601.
-   * @example "2025-10-21T14:00:00.000Z"
-   */
-  time: string;
-}
 export interface WorkingHours {
   weekday: WeekDay;
 

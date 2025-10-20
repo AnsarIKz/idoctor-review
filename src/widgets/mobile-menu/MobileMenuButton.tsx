@@ -20,7 +20,7 @@ export const MobileMenuButton = () => {
   return (
     <button
       type="button"
-      className="inline-flex items-center justify-center [...] lg:hidden p-0"
+      className="inline-flex items-center justify-center lg:hidden p-0"
       aria-label="Открыть меню навигации"
       onClick={handleClick}
     >

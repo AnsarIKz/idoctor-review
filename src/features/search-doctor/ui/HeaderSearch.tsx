@@ -24,13 +24,11 @@ export const HeaderSearch = () => {
   return (
     <div className="mx-4 hidden max-w-md grow lg:block">
       <div className="relative">
-        <SearchIcon />
-
         <div className="flex w-full flex-col">
           <div className="relative w-full px-1">
             <input
               type="search"
-              className="text-textPrimary text-base [...] p-4 h-8 w-full rounded-md bg-gray-100 py-2 pl-10 pr-2"
+              className="text-textPrimary text-base p-4 h-8 w-full rounded-md bg-gray-100 py-2 pl-10 pr-2"
               placeholder="Врачи, медцентр или специализация"
               value={searchValue}
               onChange={(e) => {

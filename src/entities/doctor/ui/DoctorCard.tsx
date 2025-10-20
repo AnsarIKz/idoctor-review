@@ -1,4 +1,3 @@
-import React from "react";
 import type { IDoctor } from "../model/doctor.types";
 import type { IRelatedClinic } from "@/shared/lib/date/related.types";
 import type { ISlot, WorkingHours } from "@/shared/lib/date/date.types";

@@ -15,19 +15,17 @@ export const DoctorCardHeader = ({
 }: DoctorCardHeaderProps) => (
   <div className="flex flex-col items-center">
     {renderDoctorLink(
-      <figure className="w-24 lg:size-44 [...]">
-        <div className="relative flex aspect-square w-44 [...]">
-          <Image
-            alt={`На фотографии изображён ${doctor.specialization.join(", ")} ${
-              doctor.fullName
-            }`}
-            src={doctor.photoUrl}
-            className="absolute inset-0 size-full rounded-full md:rounded-3xl object-cover"
-            sizes="(min-width: 1024px) 176px, 96px"
-            fill
-          />
-        </div>
-      </figure>
+      <div className="relative flex aspect-square w-24">
+        <Image
+          alt={`На фотографии изображён ${doctor.specialization.join(", ")} ${
+            doctor.fullName
+          }`}
+          src={doctor.photoUrl}
+          className="absolute inset-0 size-full rounded-full md:rounded-3xl object-cover"
+          sizes="(min-width: 1024px) 176px, 96px"
+          fill
+        />
+      </div>
     )}
 
     <div className="mt-2 flex w-full flex-col items-center pb-2">

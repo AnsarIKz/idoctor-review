@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# iDoctor Review
+
+This is a web application for finding doctors and booking appointments. It provides a user-friendly interface to search for doctors, view their profiles, and schedule a visit.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have the following software installed on your machine:
+
+- [Node.js](https://nodejs.org/) (v20 or later recommended)
+- [pnpm](https://pnpm.io/installation) package manager
+
+### Installation
+
+1.  Clone the repository to your local machine:
+
+    ```bash
+    git clone https://github.com/AnsarIKz/idoctor-review.git
+    cd idoctor-review
+    ```
+
+2.  Install the dependencies using pnpm:
+
+    ```bash
+    pnpm install
+    ```
+
+### Running the Application
+
+To start the development server, run the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand), [TanStack Query](https://tanstack.com/query/latest)
+- **Linting & Formatting**: [Biome](https://biomejs.dev/)
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+The project follows the [Feature-Sliced Design (FSD)](https://feature-sliced.design/) methodology. This architectural approach helps in organizing the codebase in a scalable and maintainable way. The main layers are:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app`: Contains application-wide setup, styles, app router, and providers.
+- `src/pages`: Contains the pages of the application.
+- `src/widgets`: Combines multiple entities and features into standalone blocks (e.g., Header, DoctorsList).
+- `src/features`: Contains pieces of business logic that are valuable to the user (e.g., book-appointment, search-doctor).
+- `src/entities`: Contains business entities (e.g., Doctor, Clinic, Appointment).
+- `src/shared`: Contains reusable code that doesn't have any business logic (e.g., UI components, libraries, helpers).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Available Scripts
 
-## Deploy on Vercel
+In the project directory, you can run:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `pnpm dev`: Runs the app in development mode with Turbopack.
+- `pnpm build`: Builds the app for production.
+- `pnpm start`: Starts a production server.
+- `pnpm lint`: Checks the code for linting errors using Biome.
+- `pnpm format`: Formats the code using Biome.

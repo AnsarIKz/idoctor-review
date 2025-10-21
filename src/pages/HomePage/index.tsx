@@ -1,6 +1,6 @@
 import { DoctorsList } from "@/widgets";
 
-export function HomePage() {
+export default function HomePage() {
   return (
     <main>
       <div className="container mx-auto p-4">

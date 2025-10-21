@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { useCallback } from "react";
 
-import { DoctorCard, type IDoctor, ClinicLink } from "@/entities";
-import type { IRelatedClinic } from "@/shared/types";
+import { DoctorCard, type IDoctor } from "@/entities/doctor";
+import { ClinicLink } from "@/entities/clinic";
+import type { IRelatedClinic } from "@/shared";
 import { TimeSlotsSelector } from "@/features/book-appointment";
-import { useBookingStore } from "@/entities";
+import { useBookingStore } from "@/entities/appointment";
 
 interface DoctorsListWithBookingProps {
   doctors: IDoctor[];
@@ -34,10 +35,11 @@ export const DoctorsListWithBooking = ({
 
   return (
     <section className="flex flex-col gap-4">
-      {doctors.map((doctor) => (
+      {doctors.map((doctor, index) => (
         <DoctorCard
           key={doctor.id}
           doctor={doctor}
+          priority={index === 0}
           renderDoctorLink={(children) => (
             <Link href={`/doctor/${doctor.id}`}>{children}</Link>
           )}

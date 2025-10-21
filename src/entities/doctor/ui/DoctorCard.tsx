@@ -5,14 +5,11 @@ import { DoctorCardBody } from "./doctor-card/DoctorCardBody";
 
 interface DoctorCardProps {
   doctor: IDoctor;
-
   renderDoctorLink: (children: React.ReactNode) => React.ReactNode;
-
   renderClinicLinkSlot: (clinic: IRelatedClinic) => React.ReactNode;
-
   renderTimeSlots: () => React.ReactNode;
-
   renderBadges?: React.ReactNode;
+  priority?: boolean;
 }
 
 export const DoctorCard = ({
@@ -21,6 +18,7 @@ export const DoctorCard = ({
   renderClinicLinkSlot,
   renderTimeSlots,
   renderBadges,
+  priority = false,
 }: DoctorCardProps) => {
   return (
     <article
@@ -29,7 +27,11 @@ export const DoctorCard = ({
     >
       <div className="empty:hidden absolute right-4 top-4">{renderBadges}</div>
 
-      <DoctorCardHeader doctor={doctor} renderDoctorLink={renderDoctorLink} />
+      <DoctorCardHeader
+        doctor={doctor}
+        renderDoctorLink={renderDoctorLink}
+        priority={priority}
+      />
       <DoctorCardBody
         doctor={doctor}
         renderDoctorLink={renderDoctorLink}

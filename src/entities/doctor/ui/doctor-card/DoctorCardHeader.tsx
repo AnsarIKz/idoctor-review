@@ -7,11 +7,13 @@ interface DoctorCardHeaderProps {
     "id" | "specialization" | "fullName" | "photoUrl" | "rating"
   >;
   renderDoctorLink: (children: React.ReactNode) => React.ReactNode;
+  priority?: boolean;
 }
 
 export const DoctorCardHeader = ({
   doctor,
   renderDoctorLink,
+  priority = false,
 }: DoctorCardHeaderProps) => (
   <div className="flex flex-col items-center">
     {renderDoctorLink(
@@ -24,6 +26,7 @@ export const DoctorCardHeader = ({
           className="absolute inset-0 size-full rounded-full md:rounded-3xl object-cover"
           sizes="(min-width: 1024px) 176px, 96px"
           fill
+          priority={priority}
         />
       </div>
     )}

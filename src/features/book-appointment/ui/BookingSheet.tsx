@@ -1,9 +1,8 @@
 "use client";
 
 import { useCallback } from "react";
-import { BottomSheet } from "@/shared/ui/BottomSheet";
-import { Button } from "@/shared/ui/Button";
-import { useBookingStore } from "@/entities/appointment/model/appointment.store";
+import { BottomSheet, Button } from "@/shared";
+import { useBookingStore } from "@/entities";
 import { ClinicSelector } from "./ClinicSelector";
 import { SpecializationSelector } from "./SpecializationSelector";
 

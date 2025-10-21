@@ -1,4 +1,4 @@
-import type { IDoctor } from "@/entities/doctor/model/doctor.types";
+import type { IDoctor } from "@/entities";
 import { DoctorsListWithBooking } from "./DoctorsListWithBooking";
 import { headers } from "next/headers";
 

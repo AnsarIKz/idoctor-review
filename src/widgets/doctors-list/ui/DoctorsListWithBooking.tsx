@@ -3,12 +3,10 @@
 import Link from "next/link";
 import { useCallback } from "react";
 
-import { DoctorCard } from "@/entities/doctor/ui/DoctorCard";
-import type { IRelatedClinic } from "@/shared/lib/date/related.types";
-import type { IDoctor } from "@/entities/doctor/model/doctor.types";
+import { DoctorCard, type IDoctor, ClinicLink } from "@/entities";
+import type { IRelatedClinic } from "@/shared/types";
 import { TimeSlotsSelector } from "@/features/book-appointment";
-import { useBookingStore } from "@/entities/appointment";
-import { ClinicLink } from "@/entities/clinic/ui/ClinicLink";
+import { useBookingStore } from "@/entities";
 
 interface DoctorsListWithBookingProps {
   doctors: IDoctor[];

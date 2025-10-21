@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useCallback, useMemo } from "react";
-import { DayItem } from "@/entities/timeslot/ui/DayItem";
-import { TimeSlotButton } from "@/entities/timeslot/ui/TimeSlotButton";
-import type { IDaySlot } from "@/entities/timeslot/model/timeslot.types";
+import { DayItem, TimeSlotButton, type IDaySlot } from "@/entities";
 
 interface TimeSlotsSelectorProps {
   days: IDaySlot[];

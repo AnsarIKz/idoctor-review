@@ -1,13 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Modal } from "@/shared/ui/Modal";
-import { Button } from "@/shared/ui/Button";
-import { useBookingStore } from "@/entities/appointment/model/appointment.store";
-import { canProceedToBooking } from "@/entities/appointment/lib/booking-logic";
+import { Modal, Button } from "@/shared";
+import { useBookingStore, canProceedToBooking } from "@/entities";
 import { PatientForm } from "./PatientForm";
 import { bookingApi } from "../api/booking.api";
-import type { IPatientData } from "@/entities/appointment/model/appointment.types";
+import type { IPatientData } from "@/entities";
 
 export const BookingModal = () => {
   const ui = useBookingStore((state) => state.ui);

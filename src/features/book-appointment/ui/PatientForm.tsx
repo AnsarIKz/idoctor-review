@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { Input } from "@/shared/ui/Input";
-import { Button } from "@/shared/ui/Button";
-import type { IPatientData } from "@/entities/appointment/model/appointment.types";
+import { Input, Button } from "@/shared";
+import type { IPatientData } from "@/entities";
 
 interface PatientFormProps {
   onSubmit: (data: IPatientData) => void;

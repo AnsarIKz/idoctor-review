@@ -1,6 +1,5 @@
-import type { IClinic } from "@/entities/clinic/model/clinic.types";
-import type { WorkingHours } from "@/shared/lib/date/date.types";
-import type { ITimeSlotsData } from "@/entities/timeslot/model/timeslot.types";
+import type { IClinic, ITimeSlotsData } from "@/entities";
+import type { WorkingHours } from "@/shared";
 
 export type PriceType = "primary" | "secondary" | "online";
 

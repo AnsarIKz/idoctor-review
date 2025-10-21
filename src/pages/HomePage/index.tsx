@@ -1,4 +1,4 @@
-import { DoctorsList } from "@/widgets/doctors-list/ui/DoctorsList";
+import { DoctorsList } from "@/widgets";
 
 export function HomePage() {
   return (

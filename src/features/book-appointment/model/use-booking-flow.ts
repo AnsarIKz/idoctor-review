@@ -1,8 +1,7 @@
 "use client";
 
-import { useBookingStore } from "@/entities/appointment/model/appointment.store";
-import type { IDoctor } from "@/entities/doctor/model/doctor.types";
-import type { IRelatedClinic } from "@/shared/lib/date/related.types";
+import { useBookingStore, type IDoctor } from "@/entities";
+import type { IRelatedClinic } from "@/shared/types";
 
 /**
  * Хук для управления процессом онлайн-записи к врачу
@@ -78,4 +77,3 @@ export const useBookingFlow = () => {
     resetBooking,
   };
 };
-

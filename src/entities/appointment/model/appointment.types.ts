@@ -1,5 +1,5 @@
-import type { IDoctor } from "@/entities/doctor/model/doctor.types";
-import type { IRelatedClinic } from "@/shared/lib/date/related.types";
+import type { IDoctor } from "@/entities";
+import type { IRelatedClinic } from "@/shared";
 
 export interface IPatientData {
   firstName: string;

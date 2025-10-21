@@ -1,7 +1,4 @@
-import type {
-  IAppointmentRequest,
-  IAppointmentResponse,
-} from "@/entities/appointment/model/appointment.types";
+import type { IAppointmentRequest, IAppointmentResponse } from "@/entities";
 
 /**
  * API для работы с записями к врачам (Mock implementation)

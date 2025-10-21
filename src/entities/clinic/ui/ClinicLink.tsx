@@ -1,4 +1,4 @@
-import type { IRelatedClinic } from "@/shared/lib/date/related.types";
+import type { IRelatedClinic } from "@/shared/types";
 
 const LocationIcon = () => (
   <svg

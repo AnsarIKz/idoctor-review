@@ -1,5 +1,5 @@
 import type { IDoctor } from "../model/doctor.types";
-import type { IRelatedClinic } from "@/shared/lib/date/related.types";
+import type { IRelatedClinic } from "@/shared/types";
 import { DoctorCardHeader } from "./doctor-card/DoctorCardHeader";
 import { DoctorCardBody } from "./doctor-card/DoctorCardBody";
 

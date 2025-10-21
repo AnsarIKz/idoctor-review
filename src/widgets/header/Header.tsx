@@ -1,8 +1,7 @@
 import { CitySelector } from "@/features/city-selector/ui/CitySelector"; // features
 import { LanguageSelector } from "@/features/language-switcher/ui/LanguageSelector"; // features
 import { HeaderSearch } from "@/features/search-doctor/ui/HeaderSearch"; // features
-import { Logo } from "@/shared/ui/Logo";
-import { Navbar } from "@/shared/ui/Navbar";
+import { Logo, Navbar } from "@/shared";
 import { MobileMenuButton } from "@/widgets/mobile-menu/MobileMenuButton";
 
 export const Header = () => {

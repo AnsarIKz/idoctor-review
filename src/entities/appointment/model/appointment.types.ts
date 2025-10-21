@@ -1,4 +1,4 @@
-import type { IDoctor } from "@/entities";
+import type { IDoctor } from "@/entities/doctor";
 import type { IRelatedClinic } from "@/shared";
 
 export interface IPatientData {

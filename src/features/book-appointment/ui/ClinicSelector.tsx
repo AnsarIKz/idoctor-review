@@ -1,6 +1,6 @@
 import { memo } from "react";
-import { ClinicLink } from "@/entities";
-import type { IRelatedClinic } from "@/shared/types";
+import { ClinicLink } from "@/entities/clinic";
+import type { IRelatedClinic } from "@/shared";
 import { clsx } from "clsx";
 
 interface ClinicSelectorProps {

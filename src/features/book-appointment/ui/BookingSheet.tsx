@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { BottomSheet, Button } from "@/shared";
-import { useBookingStore } from "@/entities";
+import { useBookingStore } from "@/entities/appointment";
 import { ClinicSelector } from "./ClinicSelector";
 import { SpecializationSelector } from "./SpecializationSelector";
 

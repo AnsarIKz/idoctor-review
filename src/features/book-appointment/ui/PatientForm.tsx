@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { Input, Button } from "@/shared";
-import type { IPatientData } from "@/entities";
+import type { IPatientData } from "@/entities/appointment";
 
 interface PatientFormProps {
   onSubmit: (data: IPatientData) => void;

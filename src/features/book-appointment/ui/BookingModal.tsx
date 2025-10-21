@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { Modal, Button } from "@/shared";
-import { useBookingStore, canProceedToBooking } from "@/entities";
+import { useBookingStore } from "@/entities/appointment";
+import { canProceedToBooking } from "@/entities/appointment/lib/booking-logic";
 import { PatientForm } from "./PatientForm";
 import { bookingApi } from "../api/booking.api";
-import type { IPatientData } from "@/entities";
+import type { IPatientData } from "@/entities/appointment";
 
 export const BookingModal = () => {
   const ui = useBookingStore((state) => state.ui);

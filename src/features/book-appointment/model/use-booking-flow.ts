@@ -1,7 +1,8 @@
 "use client";
 
-import { useBookingStore, type IDoctor } from "@/entities";
-import type { IRelatedClinic } from "@/shared/types";
+import { useBookingStore } from "@/entities/appointment";
+import type { IDoctor } from "@/entities/doctor";
+import type { IRelatedClinic } from "@/shared";
 
 /**
  * Хук для управления процессом онлайн-записи к врачу

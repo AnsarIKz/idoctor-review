@@ -1,4 +1,4 @@
-import type { IDoctor } from "@/entities";
+import type { IDoctor } from "@/entities/doctor";
 
 export const getDoctors = async (): Promise<IDoctor[]> => {
   try {

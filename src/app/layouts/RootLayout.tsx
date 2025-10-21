@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { BookingSheet, BookingModal } from "@/features/book-appointment";
-import { Header } from "@/widgets";
-import { Providers } from "@/app/providers/WithProviders";
+import { Header } from "@/widgets/header";
+import { Providers } from "@/app";
 import "@/app/styles/globals.css";
 
 const geistSans = Geist({

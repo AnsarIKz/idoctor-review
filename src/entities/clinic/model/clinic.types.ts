@@ -1,5 +1,4 @@
-import type { WorkingHours } from "@/shared";
-import type { IRelatedClinic } from "@/shared/types";
+import type { IRelatedClinic, WorkingHours } from "@/shared";
 
 export interface IClinic extends IRelatedClinic {
   phone: string;

@@ -1,4 +1,4 @@
-import { DoctorsList } from "@/widgets";
+import { DoctorsList } from "@/widgets/doctors-list";
 
 export default function HomePage() {
   return (
